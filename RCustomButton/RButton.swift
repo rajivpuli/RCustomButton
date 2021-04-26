@@ -14,7 +14,7 @@ public enum Shape: Int{
 }
 
 @IBDesignable
-public final class RButton: UIButton{
+public class RButton: UIButton{
     
     @IBInspectable public var Title: String = "Button"{
         didSet{
@@ -83,7 +83,7 @@ public final class RButton: UIButton{
         }
     }
     
-    public var shapeOfButton: Shape = .normal{
+    var shapeOfButton: Shape = .normal{
         didSet{
             switch shapeOfButton {
             case .normal:

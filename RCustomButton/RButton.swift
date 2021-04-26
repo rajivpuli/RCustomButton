@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum Shape: Int{
+enum Shape: Int{
     case normal = 0
     case cirlce
     case square

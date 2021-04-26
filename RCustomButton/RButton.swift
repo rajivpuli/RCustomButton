@@ -14,7 +14,7 @@ public enum Shape: Int{
 }
 
 @IBDesignable
-public class RButton: UIButton{
+open class RButton: UIButton{
     
     @IBInspectable public var Title: String = "Button"{
         didSet{
@@ -107,7 +107,7 @@ public class RButton: UIButton{
         super.init(frame: frame)
         self.prepareButton()
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.prepareButton()
     }

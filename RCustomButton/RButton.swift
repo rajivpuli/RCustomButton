@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Shape: Int{
+public enum Shape: Int{
     case normal = 0
     case cirlce
     case square
@@ -83,7 +83,7 @@ public class RButton: UIButton{
         }
     }
     
-    var shapeOfButton: Shape = .normal{
+    public var shapeOfButton: Shape = .normal{
         didSet{
             switch shapeOfButton {
             case .normal:

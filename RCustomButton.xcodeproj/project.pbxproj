@@ -18,6 +18,7 @@
 		9D8EA4212636E7C30004FB73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8EA41F2636E7C30004FB73 /* LaunchScreen.storyboard */; };
 		9D8EA42C2636E7C40004FB73 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA42B2636E7C40004FB73 /* DemoTests.swift */; };
 		9D8EA4372636E7C40004FB73 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA4362636E7C40004FB73 /* DemoUITests.swift */; };
+		9D8EA4482636E9770004FB73 /* RCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA4472636E9760004FB73 /* RCustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9D8EA4322636E7C40004FB73 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8EA4362636E7C40004FB73 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		9D8EA4382636E7C40004FB73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8EA4472636E9760004FB73 /* RCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				9D8EA3F52636E76C0004FB73 /* RCustomButton.h */,
 				9D8EA3F62636E76C0004FB73 /* Info.plist */,
+				9D8EA4472636E9760004FB73 /* RCustomButton.swift */,
 			);
 			path = RCustomButton;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				TargetAttributes = {
 					9D8EA3F12636E76C0004FB73 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					9D8EA3FA2636E76C0004FB73 = {
 						CreatedOnToolsVersion = 12.4;
@@ -380,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8EA4482636E9770004FB73 /* RCustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +587,7 @@
 		9D8EA4072636E76C0004FB73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -597,14 +603,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rajiv.RCustomButton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9D8EA4082636E76C0004FB73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -620,14 +629,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rajiv.RCustomButton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		9D8EA40A2636E76C0004FB73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RCustomButtonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -645,6 +656,7 @@
 		9D8EA40B2636E76C0004FB73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RCustomButtonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

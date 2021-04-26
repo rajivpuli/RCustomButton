@@ -14,7 +14,7 @@ enum Shape: Int{
 }
 
 @IBDesignable
-class RCustomButton: UIButton{
+public final class RButton: UIButton{
     
     @IBInspectable var Title: String = "Button"{
         didSet{
@@ -70,7 +70,7 @@ class RCustomButton: UIButton{
         }
     }
     
-    override var isEnabled: Bool{
+    public override var isEnabled: Bool{
         didSet{
             if isEnabled{
                 self.isUserInteractionEnabled = true
@@ -97,9 +97,8 @@ class RCustomButton: UIButton{
             case .square:
                 let size = self.frame.width > self.frame.height ? self.frame.height : self.frame.width
                 self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: size, height: size)
-                self.translatesAutoresizingMaskIntoConstraints = true
-            default:
-                break
+                self.layoutIfNeeded()
+//                self.translatesAutoresizingMaskIntoConstraints = true
             }
         }
     }
@@ -124,7 +123,7 @@ class RCustomButton: UIButton{
 //        self.layoutIfNeeded()
     }
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
     }
     

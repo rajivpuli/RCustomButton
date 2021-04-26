@@ -18,7 +18,9 @@
 		9D8EA4212636E7C30004FB73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8EA41F2636E7C30004FB73 /* LaunchScreen.storyboard */; };
 		9D8EA42C2636E7C40004FB73 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA42B2636E7C40004FB73 /* DemoTests.swift */; };
 		9D8EA4372636E7C40004FB73 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA4362636E7C40004FB73 /* DemoUITests.swift */; };
-		9D8EA4482636E9770004FB73 /* RCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA4472636E9760004FB73 /* RCustomButton.swift */; };
+		9D8EA4482636E9770004FB73 /* RButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EA4472636E9760004FB73 /* RButton.swift */; };
+		9D8EA4CE2636FF8C0004FB73 /* RCustomButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8EA3F22636E76C0004FB73 /* RCustomButton.framework */; };
+		9D8EA4CF2636FF8C0004FB73 /* RCustomButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8EA3F22636E76C0004FB73 /* RCustomButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,28 @@
 			remoteGlobalIDString = 9D8EA4112636E7C10004FB73;
 			remoteInfo = Demo;
 		};
+		9D8EA4D02636FF8C0004FB73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D8EA3E92636E76C0004FB73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D8EA3F12636E76C0004FB73;
+			remoteInfo = RCustomButton;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D8EA4D22636FF8C0004FB73 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9D8EA4CF2636FF8C0004FB73 /* RCustomButton.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9D8EA3F22636E76C0004FB73 /* RCustomButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RCustomButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +89,7 @@
 		9D8EA4322636E7C40004FB73 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8EA4362636E7C40004FB73 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		9D8EA4382636E7C40004FB73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D8EA4472636E9760004FB73 /* RCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCustomButton.swift; sourceTree = "<group>"; };
+		9D8EA4472636E9760004FB73 /* RButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8EA4CE2636FF8C0004FB73 /* RCustomButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +142,7 @@
 				9D8EA42A2636E7C40004FB73 /* DemoTests */,
 				9D8EA4352636E7C40004FB73 /* DemoUITests */,
 				9D8EA3F32636E76C0004FB73 /* Products */,
+				9D8EA4CD2636FF8C0004FB73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,7 +163,7 @@
 			children = (
 				9D8EA3F52636E76C0004FB73 /* RCustomButton.h */,
 				9D8EA3F62636E76C0004FB73 /* Info.plist */,
-				9D8EA4472636E9760004FB73 /* RCustomButton.swift */,
+				9D8EA4472636E9760004FB73 /* RButton.swift */,
 			);
 			path = RCustomButton;
 			sourceTree = "<group>";
@@ -182,6 +207,13 @@
 				9D8EA4382636E7C40004FB73 /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		9D8EA4CD2636FF8C0004FB73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +273,12 @@
 				9D8EA40E2636E7C10004FB73 /* Sources */,
 				9D8EA40F2636E7C10004FB73 /* Frameworks */,
 				9D8EA4102636E7C10004FB73 /* Resources */,
+				9D8EA4D22636FF8C0004FB73 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9D8EA4D12636FF8C0004FB73 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -384,7 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D8EA4482636E9770004FB73 /* RCustomButton.swift in Sources */,
+				9D8EA4482636E9770004FB73 /* RButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +473,11 @@
 			isa = PBXTargetDependency;
 			target = 9D8EA4112636E7C10004FB73 /* Demo */;
 			targetProxy = 9D8EA4332636E7C40004FB73 /* PBXContainerItemProxy */;
+		};
+		9D8EA4D12636FF8C0004FB73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D8EA3F12636E76C0004FB73 /* RCustomButton */;
+			targetProxy = 9D8EA4D02636FF8C0004FB73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

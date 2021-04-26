@@ -83,7 +83,7 @@ public final class RButton: UIButton{
         }
     }
     
-    public var shapeOfButton = Shape.normal{
+    @IBInspectable public var shapeOfButton = Shape.normal{
         didSet{
             switch shapeOfButton {
             case .normal:

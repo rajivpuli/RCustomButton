@@ -10,6 +10,8 @@ import RCustomButton
 
 class ViewController: UIViewController {
 
+    @IBOutlet var button: RButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

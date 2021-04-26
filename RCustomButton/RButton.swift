@@ -16,55 +16,55 @@ enum Shape: Int{
 @IBDesignable
 public final class RButton: UIButton{
     
-    @IBInspectable var Title: String = "Button"{
+    @IBInspectable public var Title: String = "Button"{
         didSet{
             self.setTitle(Title, for: .normal)
         }
     }
     
-    @IBInspectable var TitleColor: UIColor = .systemBlue{
+    @IBInspectable public var TitleColor: UIColor = .systemBlue{
         didSet{
             self.setTitleColor(TitleColor, for: .normal)
         }
     }
     
-    @IBInspectable var TitleFontSize: CGFloat = 15{
+    @IBInspectable public var TitleFontSize: CGFloat = 15{
         didSet{
             self.titleLabel?.font = .systemFont(ofSize: TitleFontSize)
         }
     }
     
-    @IBInspectable var ButtonColor: UIColor = .white{
+    @IBInspectable public var ButtonColor: UIColor = .white{
         didSet{
             self.backgroundColor = ButtonColor
         }
     }
     
-    @IBInspectable var DisableColor: UIColor = .clear{
+    @IBInspectable public var DisableColor: UIColor = .clear{
         didSet{
             self.layer.borderColor = DisableColor.cgColor
         }
     }
     
-    @IBInspectable var BorderWidth: CGFloat = 0{
+    @IBInspectable public var BorderWidth: CGFloat = 0{
         didSet{
             self.layer.borderWidth = CGFloat(BorderWidth)
         }
     }
     
-    @IBInspectable var BorderColor: UIColor = .clear{
+    @IBInspectable public var BorderColor: UIColor = .clear{
         didSet{
             self.layer.borderColor = BorderColor.cgColor
         }
     }
     
-    @IBInspectable var CornerRadius: CGFloat = 0{
+    @IBInspectable public var CornerRadius: CGFloat = 0{
         didSet{
             self.layer.cornerRadius = CornerRadius
         }
     }
     
-    @IBInspectable var buttonShape: Int = 0{
+    @IBInspectable public var buttonShape: Int = 0{
         didSet{
             shapeOfButton = Shape(rawValue: buttonShape) ?? Shape.normal
         }
@@ -83,7 +83,7 @@ public final class RButton: UIButton{
         }
     }
     
-    var shapeOfButton = Shape.normal{
+    public var shapeOfButton = Shape.normal{
         didSet{
             switch shapeOfButton {
             case .normal:

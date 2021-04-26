@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        let button = RButton()
+        button.shapeOfButton = .cirlce
     }
 
 

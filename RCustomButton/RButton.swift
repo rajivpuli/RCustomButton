@@ -7,14 +7,15 @@
 
 import UIKit
 
-public enum Shape: Int{
-    case normal = 0
-    case cirlce
-    case square
-}
-
 @IBDesignable
-open class RButton: UIButton{
+public final class RButton: UIButton{
+    
+    public enum Shape: Int{
+        case normal = 0
+        case cirlce
+        case square
+    }
+
     
     @IBInspectable public var Title: String = "Button"{
         didSet{
@@ -64,7 +65,7 @@ open class RButton: UIButton{
         }
     }
     
-    @IBInspectable var buttonShape: Int = 0{
+    @IBInspectable public var buttonShape: Int = 0{
         didSet{
             shapeOfButton = Shape(rawValue: buttonShape) ?? Shape.normal
         }
@@ -107,7 +108,7 @@ open class RButton: UIButton{
         super.init(frame: frame)
         self.prepareButton()
     }
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.prepareButton()
     }

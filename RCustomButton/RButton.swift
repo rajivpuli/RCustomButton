@@ -64,7 +64,7 @@ public class RButton: UIButton{
         }
     }
     
-    @IBInspectable public var buttonShape: Int = 0{
+    @IBInspectable var buttonShape: Int = 0{
         didSet{
             shapeOfButton = Shape(rawValue: buttonShape) ?? Shape.normal
         }
